@@ -37,7 +37,7 @@ def joy_cb(msg, twist_pub):
 if __name__ == '__main__':
     rospy.init_node('keys_to_twist')
 
-    twist_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
+    twist_pub = rospy.Publisher('screw_vel', Twist, queue_size=1)
 
     rospy.Subscriber('joy', Joy, joy_cb, twist_pub)
 
