@@ -29,8 +29,8 @@ def callback(msg):
 if __name__ == '__main__':
     rospy.init_node("ros_udp_client")
     pub = rospy.Publisher("test_vel", Twist, queue_size=1)
-    rospy.Subscriber("cmd_vel", Twist, callback)
-    rate = rospy.Rate(50)
+    rospy.Subscriber("screw_vel", Twist, callback)
+    rate = rospy.Rate(10)
     twist = Twist()
 
     while not rospy.is_shutdown():
